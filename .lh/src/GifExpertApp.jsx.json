@@ -1,0 +1,190 @@
+{
+    "sourceFile": "src/GifExpertApp.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1677245797195,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677245854342,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import React from 'react'\r\n \r\n const GifExpertApp = () => {\r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677248101583,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState();\r\n+    return (\r\n+        <>\r\n+        <h1>Gif Expert App</h1>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248258762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,12 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch']);\r\n+    return (\r\n+        <>\r\n+        <h1>Gif Expert App</h1>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248274343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,13 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch']);\r\n+    console.log(categories);\r\n+    return (\r\n+        <>\r\n+        <h1>Gif Expert App</h1>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248344802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,21 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch']);\r\n+    console.log(categories);\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        {/* Listado GIF */}\r\n+        <ol>\r\n+            <li>12</li>\r\n+            <li>23</li>\r\n+            <li>24</li>\r\n+        </ol>\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248526256,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n+    console.log(categories);\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li>category</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248536019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n+    console.log(categories);\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248586290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,22 @@\n+import { useState } from \"react\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n+    console.log(categories);\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li key={category}>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248738545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import { useState } from \"react\";\r\n \r\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n-    console.log(categories);\r\n     return (\r\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n@@ -19,116 +18,4 @@\n     )\r\n }\r\n \r\n export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n-    console.log(categories);\r\n-    return (\r\n-        <>\r\n-        {/* TITULO */}\r\n-        <h1>Gif Expert App</h1>\r\n-        {/* INPUT */}\r\n-        {/* LIST GIF */}\r\n-        <ol>\r\n-            {categories.map(category =>{\r\n-                return <li>{category}</li>\r\n-            })}\r\n-        </ol>\r\n-        {/* GIF ITEM */}\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n-    console.log(categories);\r\n-    return (\r\n-        <>\r\n-        {/* TITULO */}\r\n-        <h1>Gif Expert App</h1>\r\n-        {/* INPUT */}\r\n-        {/* LIST GIF */}\r\n-        <ol>\r\n-            {categories.map(category =>{\r\n-                return <li>category</li>\r\n-            })}\r\n-        </ol>\r\n-        {/* GIF ITEM */}\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch']);\r\n-    console.log(categories);\r\n-    return (\r\n-        <>\r\n-        {/* TITULO */}\r\n-        <h1>Gif Expert App</h1>\r\n-        {/* INPUT */}\r\n-        {/* Listado GIF */}\r\n-        <ol>\r\n-            <li>12</li>\r\n-            <li>23</li>\r\n-            <li>24</li>\r\n-        </ol>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch']);\r\n-    console.log(categories);\r\n-    return (\r\n-        <>\r\n-        <h1>Gif Expert App</h1>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch']);\r\n-    return (\r\n-        <>\r\n-        <h1>Gif Expert App</h1>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState();\r\n-    return (\r\n-        <>\r\n-        <h1>Gif Expert App</h1>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n-\r\n-const GifExpertApp = () => {\r\n-    return (\r\n-        <>\r\n-        <h1>Gif Expert App</h1>\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677248853623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,19 @@\n import { useState } from \"react\";\r\n \r\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n+\r\n+    const onAddCategory = () =>{\r\n+\r\n+    }\r\n+\r\n     return (\r\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n+        <button>Agregar</button>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677248901396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <button>Agregar</button>\r\n+        <button onClick={onAddCategory}>Agregar</button>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677248932724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-\r\n+        setCategories = 'Dragon Ball';\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677248977185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,12 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories = 'Dragon Ball';\r\n+        setCategories [\r\n+            ...categories,\r\n+            'Dragon Ball'\r\n+        ]\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677248986627,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const onAddCategory = () =>{\r\n         setCategories [\r\n             ...categories,\r\n             'Dragon Ball'\r\n-        ]\r\n+        ];\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249099865,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories [\r\n-            ...categories,\r\n-            'Dragon Ball'\r\n-        ];\r\n+        setCategories (...categories,'Dragon Ball');\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249114469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories (...categories,'Dragon Ball');\r\n+        setCategories ('Dragon Ball');\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249254160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories ('Dragon Ball');\r\n+        setCategories (category.push('Dragon Ball'));\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249342869,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories (category.push('Dragon Ball'));\r\n+        setCategories ([...category,'Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249419711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories ([...category,'Dragon Ball']);\r\n+        setCategories (['Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249429505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories (['Dragon Ball']);\r\n+        setCategories ([...category,'Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249454670,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories ([...category,'Dragon Ball']);\r\n+        setCategories ([...categories,'Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249531598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,10 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories ([...categories,'Dragon Ball']);\r\n+        setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        // setCategories ([...categories,'Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249558628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n-        setCategories (cat =>[...categories,'Dragon Ball']);\r\n-        // setCategories ([...categories,'Dragon Ball']);\r\n+        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        setCategories ([...categories,'Dragon Ball']);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249613519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n         // setCategories (cat =>[...categories,'Dragon Ball']);\r\n-        setCategories ([...categories,'Dragon Ball']);\r\n+        setCategories (['Dragon Ball',...categories]);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677249675190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,11 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n+        <input></input>\r\n+        {/* LIST GIF */}\r\n         <button onClick={onAddCategory}>Agregar</button>\r\n-        {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n             })}\r\n"
+                },
+                {
+                    "date": 1677249691542,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <input></input>\r\n+        <input/>\r\n         {/* LIST GIF */}\r\n         <button onClick={onAddCategory}>Agregar</button>\r\n         <ol>\r\n             {categories.map(category =>{\r\n"
+                },
+                {
+                    "date": 1677249904566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <input/>\r\n+        <AddCategory/>\r\n         {/* LIST GIF */}\r\n         <button onClick={onAddCategory}>Agregar</button>\r\n         <ol>\r\n             {categories.map(category =>{\r\n"
+                },
+                {
+                    "date": 1677249973491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import { useState } from \"react\";\r\n+import { AddCategory } from \"./components/AddCategory\";\r\n \r\n const GifExpertApp = () => {\r\n     const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n"
+                },
+                {
+                    "date": 1677251254833,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\";\r\n import { AddCategory } from \"./components/AddCategory\";\r\n \r\n const GifExpertApp = () => {\r\n-    const [categories   , setCategories    ] = useState(['One Punch','BOKU NO HERO']);\r\n+    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = () =>{\r\n         // setCategories (cat =>[...categories,'Dragon Ball']);\r\n         setCategories (['Dragon Ball',...categories]);\r\n@@ -13,11 +13,10 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory/>\r\n+        <AddCategory setCategories={setCategories}/>\r\n         {/* LIST GIF */}\r\n-        <button onClick={onAddCategory}>Agregar</button>\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n             })}\r\n"
+                },
+                {
+                    "date": 1677251261624,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={setCategories}/>\r\n+        <AddCategory setCategories={ setCategories }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251337568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,19 +3,19 @@\n \r\n const GifExpertApp = () => {\r\n     const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n-    const onAddCategory = () =>{\r\n+    const onAddCategory = (category) =>{\r\n         // setCategories (cat =>[...categories,'Dragon Ball']);\r\n-        setCategories (['Dragon Ball',...categories]);\r\n+        setCategories ([category,...categories]);\r\n     }\r\n \r\n     return (\r\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ setCategories }/>\r\n+        <AddCategory setCategories={ onAddCategory(category) }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251403480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ onAddCategory(category) }/>\r\n+        <AddCategory setCategories={ onAddCategory() }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251417305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ onAddCategory() }/>\r\n+        <AddCategory setCategories={ onAddCategory }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251443562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ onAddCategory }/>\r\n+        <AddCategory setCategories={ setCategories }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251488628,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ setCategories }/>\r\n+        <AddCategory setCategories={ onAddCategory(category) }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251513970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ onAddCategory(category) }/>\r\n+        <AddCategory setCategories={ setCategories }/>\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n"
+                },
+                {
+                    "date": 1677251617432,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { useState } from \"react\";\r\n+import { AddCategory } from \"./components/AddCategory\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n+\r\n+    const onAddCategory = (category) =>{\r\n+        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        setCategories ([category,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        <AddCategory setCategories={ setCategories }/>\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li key={category}>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677252344771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,12 @@\n         <>\r\n         {/* TITULO */}\r\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n-        <AddCategory setCategories={ setCategories }/>\r\n+        <AddCategory \r\n+            // setCategories={ setCategories }\r\n+            onNewCategory= {(event)=>onAddCategory(event)}\r\n+        />\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n                 return <li key={category}>{category}</li>\r\n@@ -26,33 +29,4 @@\n     )\r\n }\r\n \r\n export default GifExpertApp\r\n-import { useState } from \"react\";\r\n-import { AddCategory } from \"./components/AddCategory\";\r\n-\r\n-const GifExpertApp = () => {\r\n-    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n-\r\n-    const onAddCategory = (category) =>{\r\n-        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n-        setCategories ([category,...categories]);\r\n-    }\r\n-\r\n-    return (\r\n-        <>\r\n-        {/* TITULO */}\r\n-        <h1>Gif Expert App</h1>\r\n-        {/* INPUT */}\r\n-        <AddCategory setCategories={ setCategories }/>\r\n-        {/* LIST GIF */}\r\n-        <ol>\r\n-            {categories.map(category =>{\r\n-                return <li key={category}>{category}</li>\r\n-            })}\r\n-        </ol>\r\n-        {/* GIF ITEM */}\r\n-        </>\r\n-    )\r\n-}\r\n-\r\n-export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677252373281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         <h1>Gif Expert App</h1>\r\n         {/* INPUT */}\r\n         <AddCategory \r\n             // setCategories={ setCategories }\r\n-            onNewCategory= {(event)=>onAddCategory(event)}\r\n+            onNewCategory= {(value) => onAddCategory(value)}\r\n         />\r\n         {/* LIST GIF */}\r\n         <ol>\r\n             {categories.map(category =>{\r\n"
+                },
+                {
+                    "date": 1677252504972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,10 @@\n     const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n \r\n     const onAddCategory = (category) =>{\r\n         // setCategories (cat =>[...categories,'Dragon Ball']);\r\n-        setCategories ([category,...categories]);\r\n+        console.log(category)\r\n+        // setCategories ([category,...categories]);\r\n     }\r\n \r\n     return (\r\n         <>\r\n"
+                },
+                {
+                    "date": 1677252535270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import { useState } from \"react\";\r\n+import { AddCategory } from \"./components/AddCategory\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n+\r\n+    const onAddCategory = (newCategory) =>{\r\n+        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        console.log(newCategory);\r\n+        // setCategories ([category,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        <AddCategory \r\n+            // setCategories={ setCategories }\r\n+            onNewCategory= {(value) => onAddCategory(value)}\r\n+        />\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li key={category}>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677252568448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+import { useState } from \"react\";\r\n+import { AddCategory } from \"./components/AddCategory\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n+\r\n+    const onAddCategory = (newCategory) =>{\r\n+        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        setCategories ([newCategory,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        <AddCategory \r\n+            // setCategories={ setCategories }\r\n+            onNewCategory= {(value) => onAddCategory(value)}\r\n+        />\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li key={category}>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                },
+                {
+                    "date": 1677252857993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,33 @@\n+import { useState } from \"react\";\r\n+import { AddCategory } from \"./components/AddCategory\";\r\n+\r\n+const GifExpertApp = () => {\r\n+    const [categories   , setCategories ] = useState(['One Punch','BOKU NO HERO']);\r\n+\r\n+    const onAddCategory = (newCategory) =>{\r\n+        if(categories.includes(newCategory))return;\r\n+        // setCategories (cat =>[...categories,'Dragon Ball']);\r\n+        setCategories ([newCategory,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <>\r\n+        {/* TITULO */}\r\n+        <h1>Gif Expert App</h1>\r\n+        {/* INPUT */}\r\n+        <AddCategory \r\n+            // setCategories={ setCategories }\r\n+            onNewCategory= {(value) => onAddCategory(value)}\r\n+        />\r\n+        {/* LIST GIF */}\r\n+        <ol>\r\n+            {categories.map(category =>{\r\n+                return <li key={category}>{category}</li>\r\n+            })}\r\n+        </ol>\r\n+        {/* GIF ITEM */}\r\n+        </>\r\n+    )\r\n+}\r\n+\r\n+export default GifExpertApp\r\n"
+                }
+            ],
+            "date": 1677245797194,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nconst GifExpertApp = () => {\r\n    return (\r\n        <>\r\n        <h1>Gif Expert App</h1>\r\n        </>\r\n    )\r\n}\r\n\r\nexport default GifExpertApp\r\n"
+        }
+    ]
+}

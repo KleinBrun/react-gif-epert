@@ -1,0 +1,174 @@
+{
+    "sourceFile": "src/components/AddCategory.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 39,
+            "patches": [
+                {
+                    "date": 1677249786861,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1677249795036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n+\r\n const AddCategory = () => {\r\n   return (\r\n     <div>\r\n       \r\n     </div>\r\n   )\r\n+\r\n export default AddCategory\r\n"
+                },
+                {
+                    "date": 1677249836217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,6 @@\n     <div>\r\n       \r\n     </div>\r\n   )\r\n+}\r\n \r\n-export default AddCategory\r\n"
+                },
+                {
+                    "date": 1677249844972,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n const AddCategory = () => {\r\n-  return (\r\n+    return (\r\n     <div>\r\n-      \r\n+        \r\n     </div>\r\n-  )\r\n+    )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1677249863560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+\r\n+const AddCategory = () => {\r\n+    return (\r\n+        <div>AddCategory</div>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677249956045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,7 @@\n+\r\n+export const AddCategory = () => {\r\n+    return (\r\n+        <div>AddCategory</div>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677250053540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +1,10 @@\n \r\n export const AddCategory = () => {\r\n     return (\r\n-        <div>AddCategory</div>\r\n+        <input\r\n+            type=\"text\"\r\n+            placeholder=\"Buscar Gifs\"\r\n+        />\r\n     )\r\n }\r\n \r\n-\r\n-const AddCategory = () => {\r\n-    return (\r\n-        <div>AddCategory</div>\r\n-    )\r\n-}\r\n-\r\n-\r\n-const AddCategory = () => {\r\n-    return (\r\n-    <div>\r\n-        \r\n-    </div>\r\n-    )\r\n-}\r\n-\r\n"
+                },
+                {
+                    "date": 1677250208457,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n+import { useState } from \"react\"\r\n \r\n export const AddCategory = () => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');\r\n+\r\n     return (\r\n         <input\r\n             type=\"text\"\r\n             placeholder=\"Buscar Gifs\"\r\n"
+                },
+                {
+                    "date": 1677250497898,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,14 @@\n import { useState } from \"react\"\r\n \r\n export const AddCategory = () => {\r\n \r\n-    const [inputValue, setInputValue] = useState('');\r\n+    const [inputValue, setInputValue] = useState('');  \r\n \r\n+    const onInputChange = () =>{\r\n+        setInputValue('hola');\r\n+    }\r\n+\r\n     return (\r\n         <input\r\n             type=\"text\"\r\n             placeholder=\"Buscar Gifs\"\r\n"
+                },
+                {
+                    "date": 1677250524891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,10 @@\n     return (\r\n         <input\r\n             type=\"text\"\r\n             placeholder=\"Buscar Gifs\"\r\n+            value={inputValue}\r\n+            onChange={onInputChange}\r\n         />\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1677250537339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\"\r\n \r\n export const AddCategory = () => {\r\n \r\n-    const [inputValue, setInputValue] = useState('');  \r\n+    const [inputValue, setInputValue] = useState('klein');  \r\n \r\n     const onInputChange = () =>{\r\n         setInputValue('hola');\r\n     }\r\n"
+                },
+                {
+                    "date": 1677250605633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n         <input\r\n             type=\"text\"\r\n             placeholder=\"Buscar Gifs\"\r\n             value={inputValue}\r\n-            onChange={onInputChange}\r\n+            onChange={(event) => onInputChange(event)}\r\n         />\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1677250612881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n export const AddCategory = () => {\r\n \r\n     const [inputValue, setInputValue] = useState('klein');  \r\n \r\n-    const onInputChange = () =>{\r\n+    const onInputChange = (event) =>{\r\n         setInputValue('hola');\r\n     }\r\n \r\n     return (\r\n"
+                },
+                {
+                    "date": 1677250682168,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     const [inputValue, setInputValue] = useState('klein');  \r\n \r\n     const onInputChange = (event) =>{\r\n-        setInputValue('hola');\r\n+        setInputValue(inputValue + event.target);\r\n     }\r\n \r\n     return (\r\n         <input\r\n"
+                },
+                {
+                    "date": 1677250695886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n     const [inputValue, setInputValue] = useState('klein');  \r\n \r\n     const onInputChange = (event) =>{\r\n-        setInputValue(inputValue + event.target);\r\n+        setInputValue(inputValue + event.target.value);\r\n     }\r\n \r\n     return (\r\n         <input\r\n"
+                },
+                {
+                    "date": 1677250704073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { useState } from \"react\"\r\n \r\n export const AddCategory = () => {\r\n \r\n-    const [inputValue, setInputValue] = useState('klein');  \r\n+    const [inputValue, setInputValue] = useState('');  \r\n \r\n     const onInputChange = (event) =>{\r\n         setInputValue(inputValue + event.target.value);\r\n     }\r\n"
+                },
+                {
+                    "date": 1677250737367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n import { useState } from \"react\"\r\n \r\n export const AddCategory = () => {\r\n \r\n-    const [inputValue, setInputValue] = useState('');  \r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n \r\n     const onInputChange = (event) =>{\r\n-        setInputValue(inputValue + event.target.value);\r\n+        setInputValue(event.target.value);\r\n     }\r\n \r\n     return (\r\n         <input\r\n"
+                },
+                {
+                    "date": 1677250818735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,18 @@\n export const AddCategory = () => {\r\n \r\n     const [inputValue, setInputValue] = useState('KLein');  \r\n \r\n-    const onInputChange = (event) =>{\r\n-        setInputValue(event.target.value);\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n     }\r\n \r\n     return (\r\n         <input\r\n             type=\"text\"\r\n             placeholder=\"Buscar Gifs\"\r\n             value={inputValue}\r\n-            onChange={(event) => onInputChange(event)}\r\n+            onChange={onInputChange}\r\n         />\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1677250887650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,15 @@\n         setInputValue(target.value);\r\n     }\r\n \r\n     return (\r\n-        <input\r\n-            type=\"text\"\r\n-            placeholder=\"Buscar Gifs\"\r\n-            value={inputValue}\r\n-            onChange={onInputChange}\r\n-        />\r\n+        <form>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1677251034598,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,14 @@\n     const onInputChange = ({target}) =>{\r\n         setInputValue(target.value);\r\n     }\r\n \r\n+    const onSubmit = (event) =>{\r\n+\r\n+    }\r\n+\r\n     return (\r\n-        <form>\r\n+        <form onSubmit={onSubmit}>\r\n             <input\r\n                 type=\"text\"\r\n                 placeholder=\"Buscar Gifs\"\r\n                 value={inputValue}\r\n"
+                },
+                {
+                    "date": 1677251054910,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         setInputValue(target.value);\r\n     }\r\n \r\n     const onSubmit = (event) =>{\r\n-\r\n+        event.preventDefault();\r\n     }\r\n \r\n     return (\r\n         <form onSubmit={onSubmit}>\r\n"
+                },
+                {
+                    "date": 1677251091646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     }\r\n \r\n     const onSubmit = (event) =>{\r\n         event.preventDefault();\r\n+        console.log(inputValue);\r\n     }\r\n \r\n     return (\r\n         <form onSubmit={onSubmit}>\r\n"
+                },
+                {
+                    "date": 1677251352475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n     }\r\n \r\n     const onSubmit = (event) =>{\r\n         event.preventDefault();\r\n+        onAddCategory(inputValue);\r\n         console.log(inputValue);\r\n     }\r\n \r\n     return (\r\n"
+                },
+                {
+                    "date": 1677251386015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = () => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        onAddCategory(setCategories(inputValue));\r\n+        // console.log(inputValue);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251395701,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = () => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        // console.log(inputValue);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251429623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = () => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        console.log(setCategories);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251464368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = (setCategories) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        console.log(setCategories);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251496262,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = (onAddCategory) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        console.log(onAddCategory);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251516033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,28 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = (setCategories) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        console.log(setCategories);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251530768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n     const onSubmit = (event) =>{\r\n         event.preventDefault();\r\n         // onAddCategory(setCategories(inputValue));\r\n         console.log(setCategories);\r\n+        setCategories ([inputValue,...categories]);\r\n     }\r\n \r\n     return (\r\n         <form onSubmit={onSubmit}>\r\n@@ -25,172 +26,4 @@\n         </form>\r\n     )\r\n }\r\n \r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = (onAddCategory) => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        // onAddCategory(setCategories(inputValue));\r\n-        console.log(onAddCategory);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = (setCategories) => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        // onAddCategory(setCategories(inputValue));\r\n-        console.log(setCategories);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = () => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        // onAddCategory(setCategories(inputValue));\r\n-        console.log(setCategories);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = () => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        // onAddCategory(setCategories(inputValue));\r\n-        // console.log(inputValue);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = () => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        onAddCategory(setCategories(inputValue));\r\n-        // console.log(inputValue);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n-import { useState } from \"react\"\r\n-\r\n-export const AddCategory = () => {\r\n-\r\n-    const [inputValue, setInputValue] = useState('KLein');  \r\n-\r\n-    const onInputChange = ({target}) =>{\r\n-        setInputValue(target.value);\r\n-    }\r\n-\r\n-    const onSubmit = (event) =>{\r\n-        event.preventDefault();\r\n-        onAddCategory(inputValue);\r\n-        console.log(inputValue);\r\n-    }\r\n-\r\n-    return (\r\n-        <form onSubmit={onSubmit}>\r\n-            <input\r\n-                type=\"text\"\r\n-                placeholder=\"Buscar Gifs\"\r\n-                value={inputValue}\r\n-                onChange={onInputChange}\r\n-            />\r\n-        </form>\r\n-    )\r\n-}\r\n-\r\n"
+                },
+                {
+                    "date": 1677251875223,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { useState } from \"react\"\r\n \r\n-export const AddCategory = (setCategories) => {\r\n+export const AddCategory = ({setCategories}) => {\r\n \r\n     const [inputValue, setInputValue] = useState('KLein');  \r\n \r\n     const onInputChange = ({target}) =>{\r\n@@ -11,9 +11,9 @@\n     const onSubmit = (event) =>{\r\n         event.preventDefault();\r\n         // onAddCategory(setCategories(inputValue));\r\n         console.log(setCategories);\r\n-        setCategories ([inputValue,...categories]);\r\n+        setCategories (categorie = [inputValue,...categories]);\r\n     }\r\n \r\n     return (\r\n         <form onSubmit={onSubmit}>\r\n"
+                },
+                {
+                    "date": 1677251905052,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({setCategories}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        // console.log(setCategories);\r\n+        setCategories (categories = [inputValue,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251915470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({setCategories}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        // console.log(setCategories);\r\n+        setCategories (categories => [inputValue,...categories]);\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677251942374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({setCategories}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        // onAddCategory(setCategories(inputValue));\r\n+        // console.log(setCategories);\r\n+        setCategories (categories => [inputValue,...categories]);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252040943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({setCategories}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('KLein');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        setCategories (categories => [inputValue,...categories]);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252157443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,29 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({setCategories}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        setCategories (categories => [inputValue,...categories]);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252432277,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({onNewCategory}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        // onNewCategory (categories => [inputValue,...categories]);\r\n+        onNewCategory(inputValue);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252445441,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({onNewCategory}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        // onNewCategory (categories => [inputValue,...categories]);\r\n+        onNewCategory(inputValue.trim);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252492893,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({onNewCategory}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        // setCategories (categories => [inputValue,...categories]);\r\n+        onNewCategory(inputValue.trim);\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1677252548006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,30 @@\n+import { useState } from \"react\"\r\n+\r\n+export const AddCategory = ({onNewCategory}) => {\r\n+\r\n+    const [inputValue, setInputValue] = useState('');  \r\n+\r\n+    const onInputChange = ({target}) =>{\r\n+        setInputValue(target.value);\r\n+    }\r\n+\r\n+    const onSubmit = (event) =>{\r\n+        event.preventDefault();\r\n+        if(inputValue.trim().length <=1) return;\r\n+        // setCategories (categories => [inputValue,...categories]);\r\n+        onNewCategory(inputValue.trim());\r\n+        setInputValue('');\r\n+    }\r\n+\r\n+    return (\r\n+        <form onSubmit={onSubmit}>\r\n+            <input\r\n+                type=\"text\"\r\n+                placeholder=\"Buscar Gifs\"\r\n+                value={inputValue}\r\n+                onChange={onInputChange}\r\n+            />\r\n+        </form>\r\n+    )\r\n+}\r\n+\r\n"
+                }
+            ],
+            "date": 1677249786861,
+            "name": "Commit-0",
+            "content": "const AddCategory = () => {\r\n  return (\r\n    <div>\r\n      \r\n    </div>\r\n  )\r\nexport default AddCategory\r\n"
+        }
+    ]
+}
